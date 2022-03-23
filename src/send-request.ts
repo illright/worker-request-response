@@ -1,5 +1,5 @@
 import { trackPromise } from './promise-registry';
-import type { MessageOutlet } from './message-outlet';
+import type { MessageOutlet } from './public-types';
 
 export function sendRequest<RequestType, ResponseType>(
   request: RequestType,

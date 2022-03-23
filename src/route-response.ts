@@ -1,7 +1,4 @@
-import type { TrackedPayload } from './tracked-payload';
-import type { MessageOutlet } from './message-outlet';
-
-export type RequestHandler<RequestType, ResponseType> = (event: MessageEvent<RequestType>) => ResponseType;
+import type { MessageOutlet, RequestHandler, TrackedPayload } from './public-types';
 
 export function routeResponse<RequestType, ResponseType>(handler: RequestHandler<RequestType, ResponseType>, outlet: MessageOutlet<ResponseType> = postMessage) {
   return async function (event: MessageEvent<TrackedPayload<RequestType>>) {

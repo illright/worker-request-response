@@ -1,4 +1,4 @@
-export type ResolutionFunction<ResolvedValueType> = (value: ResolvedValueType) => void;
+import type { ResolutionFunction } from './public-types';
 
 const registry = new Map<number, ResolutionFunction<unknown>>();
 let idCounter = 0;
