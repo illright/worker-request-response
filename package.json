@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"build": "tsc"
+	},
 	"dependencies": {
 		"esbuild": "^0.14.27",
 		"typescript": "^4.6.2"
