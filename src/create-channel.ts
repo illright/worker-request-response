@@ -1,6 +1,7 @@
 import { catchResponse } from './catch-response';
 import { trackPromise } from './promise-registry';
 import { syn, ack, fin } from './messages';
+import type { ChannelController } from './public-types';
 import type { Client } from './lib.webworker';
 
 export function createChannel<RequestPayload, ResponsePayload>(client: Client) {
@@ -22,7 +23,7 @@ export function createChannel<RequestPayload, ResponsePayload>(client: Client) {
     messageChannel.port2.onmessage = null;
   }
 
-  return new Promise((resolve) => {
+  return new Promise<ChannelController<RequestPayload, ResponsePayload>>((resolve) => {
     function awaitAck(event: MessageEvent<unknown>) {
       if (event.data === ack) {
         messageChannel.port1.onmessage = catchResponse;
