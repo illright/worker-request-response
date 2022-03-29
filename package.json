@@ -14,7 +14,7 @@
 	"author": "Lev Chelyadinov (https://github.com/illright)",
 	"repository": "https://github.com/illright/worker-request-response",
 	"bugs": "https://github.com/illright/worker-request-response/issues",
-	"license": "MIT",
+	"license": "ISC",
 	"packageManager": "pnpm@6.32.3",
 	"files": [
 		"dist/",
