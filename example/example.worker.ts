@@ -1,4 +1,4 @@
-import { routeResponse } from '../src';
+import { acceptChannel } from '../src';
 import type { RequestPayload, ResponsePayload } from './protocol';
 
 async function processRequest(
@@ -7,4 +7,4 @@ async function processRequest(
   return event.data.toString();
 }
 
-addEventListener('message', routeResponse(processRequest));
+acceptChannel(processRequest);
