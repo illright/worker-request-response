@@ -1,4 +1,4 @@
-export { routeResponse } from './route-response';
-export { sendRequest } from './send-request';
+export { createChannel } from './create-channel';
+export { acceptChannel } from './accept-channel';
 
-export type { MessageOutlet, TrackedPayload, ResolutionFunction, RequestHandler } from './public-types';
+export type { TrackedPayload, ResolutionFunction, RequestHandler } from './public-types';

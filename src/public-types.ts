@@ -3,10 +3,6 @@ export interface TrackedPayload<OriginalPayloadType> {
   payload: OriginalPayloadType;
 }
 
-export type MessageOutlet<MessageType> = {
-  postMessage: (payload: TrackedPayload<MessageType>) => void;
-} | ((payload: TrackedPayload<MessageType>) => void);
-
 export type ResolutionFunction<ResolvedValueType> = (value: ResolvedValueType) => void;
 
 export type RequestHandler<RequestType, ResponseType> = (event: MessageEvent<RequestType>) => ResponseType;
