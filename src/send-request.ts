@@ -8,6 +8,12 @@ function catchResponse<ResponsePayloadType>(event: MessageEvent<unknown>) {
   }
 }
 
+/**
+ * Send a request to a worker and await its response.
+ *
+ * The worker can be any client that supports `postMessage` and the Channel Messaging API.
+ * That includes service workers and web workers.
+ */
 export async function sendRequest<RequestPayloadType, ResponsePayloadType>(
   client: Client,
   payload: RequestPayloadType,
