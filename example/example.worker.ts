@@ -1,4 +1,4 @@
-import { listenToRequests } from '../src';
+import { handleRequestsWith } from '../src';
 import type { RequestPayload, ResponsePayload } from './protocol';
 
 async function processRequest(
@@ -7,4 +7,4 @@ async function processRequest(
   return event.data.toString();
 }
 
-listenToRequests(processRequest, self);
+self.addEventListener('message', handleRequestsWith(processRequest));

@@ -9,8 +9,8 @@ function catchResponse<ResponsePayloadType>(event: MessageEvent<unknown>) {
 }
 
 export async function sendRequest<RequestPayloadType, ResponsePayloadType>(
+  client: Client,
   payload: RequestPayloadType,
-  client: Client
 ) {
   const messageChannel = new MessageChannel();
 
