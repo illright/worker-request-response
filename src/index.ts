@@ -1,4 +1,4 @@
-export { createChannel } from './create-channel';
-export { acceptChannel } from './accept-channel';
+export { listenToRequests } from './listen-to-requests';
+export { sendRequest } from './send-request';
 
-export type { TrackedPayload, ResolutionFunction, RequestHandler, ChannelController } from './public-types';
+export type { TrackedPayload, ResolutionFunction, RequestHandler, ChannelController, MessageEventProducer } from './public-types';

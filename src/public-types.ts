@@ -1,5 +1,8 @@
+import type { request } from './messages';
+
 export interface TrackedPayload<OriginalPayloadType> {
   id: number;
+  type: typeof request;
   payload: OriginalPayloadType;
 }
 
@@ -10,4 +13,8 @@ export type RequestHandler<RequestType, ResponseType> = (event: MessageEvent<Req
 export interface ChannelController<RequestPayload, ResponsePayload> {
   sendRequest(payload: RequestPayload): Promise<MessageEvent<ResponsePayload>>;
   tearDown(): void;
+}
+
+export interface MessageEventProducer {
+  addEventListener(eventName: 'message', handler: (event: MessageEvent) => void): void;
 }
