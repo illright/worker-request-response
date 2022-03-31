@@ -14,7 +14,3 @@ export interface ChannelController<RequestPayload, ResponsePayload> {
   sendRequest(payload: RequestPayload): Promise<MessageEvent<ResponsePayload>>;
   tearDown(): void;
 }
-
-export interface MessageEventProducer {
-  addEventListener(eventName: 'message', handler: (event: MessageEvent) => void): void;
-}

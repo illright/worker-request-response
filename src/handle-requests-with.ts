@@ -1,10 +1,10 @@
 import { isTrackedPayload } from './is-tracked-payload';
 import { request } from './messages';
-import type { RequestHandler, TrackedPayload, MessageEventProducer } from './public-types';
+import type { RequestHandler, TrackedPayload } from './public-types';
 
-export function listenToRequests<RequestPayload, ResponsePayload>(
-  handler: RequestHandler<RequestPayload, ResponsePayload>,
-  client: MessageEventProducer,
+/** Create an event listener that watches requests made by this library for this library. */
+export function handleRequestsWith<RequestPayload, ResponsePayload>(
+  handler: RequestHandler<RequestPayload, ResponsePayload>
 ) {
   async function filterOutRequests(event: MessageEvent<unknown>) {
     if (isTrackedPayload<RequestPayload>(event.data) && event.ports.length === 1) {
@@ -19,5 +19,5 @@ export function listenToRequests<RequestPayload, ResponsePayload>(
     }
   }
 
-  client.addEventListener('message', filterOutRequests);
+  return filterOutRequests;
 }

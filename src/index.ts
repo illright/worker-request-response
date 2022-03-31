@@ -1,4 +1,4 @@
-export { listenToRequests } from './listen-to-requests';
+export { handleRequestsWith } from './handle-requests-with';
 export { sendRequest } from './send-request';
 
-export type { TrackedPayload, ResolutionFunction, RequestHandler, ChannelController, MessageEventProducer } from './public-types';
+export type { TrackedPayload, ResolutionFunction, RequestHandler, ChannelController } from './public-types';
