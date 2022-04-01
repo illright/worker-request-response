@@ -1,7 +1,7 @@
 {
 	"name": "worker-request-response",
 	"description": "A Promise API for submitting requests to workers and tracking responses",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
 		"build": "tsc"
 	},
 	"devDependencies": {
-		"@tsconfig/recommended": "^1.0.1",
+		"@tsconfig/node16-strictest-esm": "^1.0.0",
 		"typescript": "^4.6.2"
 	},
 	"author": "Lev Chelyadinov (https://github.com/illright)",
@@ -19,7 +19,9 @@
 	"bugs": "https://github.com/illright/worker-request-response/issues",
 	"license": "ISC",
 	"packageManager": "pnpm@6.32.3",
-	"files": ["dist/*"],
+	"files": [
+		"dist/*"
+	],
 	"keywords": [
 		"worker",
 		"web worker",

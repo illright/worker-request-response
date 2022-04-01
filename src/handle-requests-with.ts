@@ -7,7 +7,7 @@ export function handleRequestsWith<RequestPayload, ResponsePayload>(
   handler: RequestHandler<RequestPayload, ResponsePayload>
 ) {
   async function filterOutRequests(event: MessageEvent<unknown>) {
-    if (isTrackedPayload<RequestPayload>(event.data) && event.ports.length === 1) {
+    if (isTrackedPayload<RequestPayload>(event.data) && event.ports[0] !== undefined) {
       const { id, payload } = event.data;
 
       const fakeEvent = Object.create(event);

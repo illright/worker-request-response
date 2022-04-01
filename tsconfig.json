@@ -1,9 +1,9 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
     "outDir": "dist",
-    "declaration": true,
-    "importsNotUsedAsValues": "error"
+    "declaration": true
   },
   "files": ["src/index.ts"]
 }
