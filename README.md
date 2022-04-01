@@ -1,5 +1,8 @@
 # `worker-request-response` 👷‍♀️💬🗨️
 
+![npm version](https://img.shields.io/npm/v/worker-request-response)
+![minzipped package size](https://img.shields.io/bundlephobia/minzip/worker-request-response.svg)
+
 _Ever wish you could request some data from a service/web worker and have them respond to you asynchronously?_
 
 A Promise API for submitting requests to workers and tracking responses.
