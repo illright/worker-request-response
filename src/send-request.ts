@@ -1,6 +1,6 @@
-import { stamp, resolveByID } from './promise-registry';
-import { isTrackedPayload } from './is-tracked-payload';
-import type { Client } from './lib.webworker';
+import { stamp, resolveByID } from './promise-registry.js';
+import { isTrackedPayload } from './is-tracked-payload.js';
+import type { Client } from './lib.webworker.js';
 
 function catchResponse<ResponsePayloadType>(event: MessageEvent<unknown>) {
   if (isTrackedPayload<ResponsePayloadType>(event.data)) {

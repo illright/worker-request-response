@@ -1,5 +1,5 @@
-import type { ResolutionFunction, TrackedPayload } from './public-types';
-import { request } from './messages';
+import type { ResolutionFunction, TrackedPayload } from './public-types.js';
+import { request } from './messages.js';
 
 const registry = new Map<number, ResolutionFunction<unknown>>();
 let idCounter = 0;

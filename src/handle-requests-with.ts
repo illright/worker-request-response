@@ -1,6 +1,6 @@
-import { isTrackedPayload } from './is-tracked-payload';
-import { request } from './messages';
-import type { RequestHandler, TrackedPayload } from './public-types';
+import { isTrackedPayload } from './is-tracked-payload.js';
+import { request } from './messages.js';
+import type { RequestHandler, TrackedPayload } from './public-types.js';
 
 /** Create an event listener that watches requests made by this library for this library. */
 export function handleRequestsWith<RequestPayload, ResponsePayload>(
