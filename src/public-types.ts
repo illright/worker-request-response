@@ -1,4 +1,4 @@
-import type { request } from './messages';
+import type { request } from './messages.js';
 
 export interface TrackedPayload<OriginalPayloadType> {
   id: number;
