@@ -1,13 +1,9 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
-    "module": "ESNext",
     "outDir": "dist",
     "declaration": true,
-    "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "importsNotUsedAsValues": "error"
   },
   "files": ["src/index.ts"]
 }
