@@ -76,7 +76,7 @@ async function() {
 
 ### Asynchronous request handler in the worker
 
-The request handler that you pass into `routeResponse` can be synchronous or asynchronous — in the latter case the resulting promise is awaited before being sent back.
+The request handler that you pass into `handleRequestsWith` can be synchronous or asynchronous — in the latter case the resulting promise is awaited before being sent back.
 
 ## License
 
