@@ -5,13 +5,14 @@ specifiers:
   typescript: ^5.0.2
 
 devDependencies:
-  '@tsconfig/node16-strictest-esm': 1.0.0
+  '@tsconfig/node16-strictest-esm': 1.0.3
   typescript: 5.1.3
 
 packages:
 
-  /@tsconfig/node16-strictest-esm/1.0.0:
-    resolution: {integrity: sha512-B/R4m4fy4ZKvAjwpDW3BdfNHYhRltMPpUdZTI0RpKSTU6HzA7Ub3XskVmbFG45JaOcjuTqXzO7o4rDG0LfUYzQ==}
+  /@tsconfig/node16-strictest-esm/1.0.3:
+    resolution: {integrity: sha512-0/QTPDkKmE2dy0dMRstPCv4VJ+gUGgvMKzaWd5P3hgdlmPqYqe1pJxDGUlNYbSgUBlncIvvX+mIeZarokysNgg==}
+    deprecated: TypeScript 5.0 supports combining TSConfigs using array syntax in extends
     dev: true
 
   /typescript/5.1.3:
