@@ -1,7 +1,7 @@
 # `worker-request-response` 👷‍♀️💬🗨️
 
-![npm version](https://img.shields.io/npm/v/worker-request-response)
-![minzipped package size](https://img.shields.io/bundlephobia/minzip/worker-request-response.svg)
+[![npm version](https://img.shields.io/npm/v/worker-request-response)](https://www.npmjs.com/package/worker-request-response)
+[![minzipped package size](https://img.shields.io/bundlephobia/minzip/worker-request-response.svg)](https://bundlephobia.com/package/worker-request-response)
 
 _Ever wish you could request some data from a service/web worker and have them respond to you asynchronously?_
 
